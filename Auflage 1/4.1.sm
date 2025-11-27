@@ -4,7 +4,7 @@
   <settings ppi="96">
     <identity>
       <id>4eee0fda-9431-44a8-b0c5-1663282ec29b</id>
-      <revision>26</revision>
+      <revision>28</revision>
     </identity>
     <metadata lang="ger">
       <author>Martin Kraska</author>
@@ -39,10 +39,17 @@
     </dependencies>
   </settings>
   <regions type="content">
-    <region left="0" top="0" width="446" height="23" color="#000000" fontSize="10">
+    <region left="0" top="0" width="251" height="23" color="#000000" fontSize="10">
       <text lang="ger" fontFamily="Arial" fontSize="10">
         <content>
-          <p style="font-weight: bold; text-decoration: underline;">Beispiel 4.1 "Technische Mechanik mit SMath Studio" Martin Kraska</p>
+          <p style="font-weight: bold; text-decoration: underline;">Beispiel 4.1: Statik, Rahmentragwerk </p>
+        </content>
+      </text>
+    </region>
+    <region left="288" top="0" width="453" height="23" color="#000000" fontSize="10">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Begleitmaterial zu "Technische Mechanik mit SMath Studio" Martin Kraska</p>
         </content>
       </text>
     </region>
