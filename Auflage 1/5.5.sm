@@ -1,0 +1,1015 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Solver" version="1.3.0.9126"?>
+<worksheet xmlns="http://smath.info/schemas/worksheet/1.0">
+  <settings ppi="96">
+    <identity>
+      <id>ea4c5fae-6064-4e30-8f38-1a49f5a3cf80</id>
+      <revision>45</revision>
+    </identity>
+    <metadata lang="ger">
+      <author>Martin Kraska</author>
+    </metadata>
+    <metadata lang="eng">
+      <author>Martin Kraska</author>
+    </metadata>
+    <calculation>
+      <precision>4</precision>
+      <exponentialThreshold>5</exponentialThreshold>
+      <trailingZeros>false</trailingZeros>
+      <significantDigitsMode>false</significantDigitsMode>
+      <mixedNumbers>false</mixedNumbers>
+      <roundingMode>0</roundingMode>
+      <approximateEqualAccuracy>3</approximateEqualAccuracy>
+      <fractions>decimal</fractions>
+    </calculation>
+    <pageModel active="true" viewMode="0" printGrid="false" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true" hideElementsHighlightings="true">
+      <paper id="9" orientation="Portrait" width="827" height="1169" />
+      <margins left="78" right="118" top="49" bottom="49" />
+      <header alignment="Center" color="#a9a9a9">&amp;[DATE] &amp;[TIME] - &amp;[FILENAME]</header>
+      <footer alignment="Center" color="#a9a9a9">&amp;[PAGENUM] / &amp;[COUNT]</footer>
+      <backgrounds />
+    </pageModel>
+    <dependencies>
+      <assembly name="SMath Core" version="1.73.9126.0" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="MathRegion" version="1.73.9126.0" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="PictureRegion" version="1.73.9126.0" guid="06b5df04-393e-4be7-9107-305196fcb861" />
+      <assembly name="CustomFunctions" version="1.2.9372.30444" guid="18dadffd-79a3-4cf9-aee1-d66deb0ea720" />
+      <assembly name="SpecialFunctions" version="1.73.9126.0" guid="2814e667-4e12-48b1-8d51-194e480eabc5" />
+      <assembly name="TextRegion" version="1.73.9126.0" guid="485d28c5-349a-48b6-93be-12a35a1c1e39" />
+      <assembly name="AreaRegion" version="1.73.9126.0" guid="4974b228-4974-44cf-8274-bf2936b4a766" />
+      <assembly name="X-Y Plot Region (JXCharts)" version="0.4.9441.40064" guid="c12231ec-4873-43c1-a7d0-a167ebd17066" />
+      <assembly name="PlotRegion" version="1.73.9126.0" guid="c451c2b5-798b-4f08-b9ec-b90963d1ddaa" />
+      <assembly name="Mathcad Toolbox" version="0.6.9367.4182" guid="ddc09821-49f1-4c21-a829-6499de0a8f06" />
+    </dependencies>
+  </settings>
+  <regions type="content">
+    <region left="0" top="0" width="422" height="23" color="#000000" fontSize="10">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold; text-decoration: underline;">Beispiel 5.5 in Kraska: "Technische Mechanik mit SMath Studio"</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="36" width="366" height="174" color="#000000">
+      <picture>
+        <raw format="png" encoding="base64">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</raw>
+      </picture>
+    </region>
+    <region left="0" top="216" width="55" height="23" color="#000000" fontSize="10">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Länge </p>
+        </content>
+      </text>
+    </region>
+    <region left="99" top="216" width="58" height="24" color="#000000" bgColor="#ffff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">L</e>
+          <e type="operand">7</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="189" top="234" width="153" height="105" color="#000000">
+      <picture>
+        <raw format="png" encoding="base64">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</raw>
+      </picture>
+    </region>
+    <region left="0" top="243" width="91" height="23" color="#000000" fontSize="10">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Streckenlast </p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="270" width="77" height="41" color="#000000" bgColor="#ffff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">q.a</e>
+          <e type="operand">1</e>
+          <e type="operand" style="unit">kN</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="99" top="270" width="77" height="41" color="#000000" bgColor="#ffff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">q.b</e>
+          <e type="operand">2</e>
+          <e type="operand" style="unit">kN</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="315" width="65" height="30" color="#000000" bgColor="#ffff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">x.a</e>
+          <e type="operand">4</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="99" top="315" width="54" height="30" color="#000000" bgColor="#ffff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">x.b</e>
+          <e type="operand">L</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="342" width="293" height="51" color="#000000" bgColor="#ffff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">x</e>
+          <e type="function" args="1">q</e>
+          <e type="operand">q.a</e>
+          <e type="operand">q'</e>
+          <e type="operand">x</e>
+          <e type="operand">x.a</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">x</e>
+          <e type="operand">x.a</e>
+          <e type="operand">x.b</e>
+          <e type="function" args="3">ltlt</e>
+          <e type="operand">0</e>
+          <e type="function" args="3">cases</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="315" top="342" width="164" height="56" color="#000000" bgColor="#ffff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">q'</e>
+          <e type="operand">q.b</e>
+          <e type="operand">q.a</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">x.b</e>
+          <e type="operand">x.a</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">N</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">/</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">333</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="405" width="59" height="23" color="#000000" fontSize="10">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Punkte </p>
+        </content>
+      </text>
+    </region>
+    <region left="108" top="405" width="53" height="23" color="#000000" fontSize="10">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Kräfte </p>
+        </content>
+      </text>
+    </region>
+    <region left="225" top="405" width="73" height="23" color="#000000" fontSize="10">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Momente </p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="432" width="90" height="118" color="#000000" bgColor="#ffff80" fontSize="10">
+      <math optimize="2" decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">X</e>
+          <e type="operand">0</e>
+          <e type="operand">1</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">2</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">3</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">4.5</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">L</e>
+          <e type="operand">6</e>
+          <e type="operand">1</e>
+          <e type="function" args="8">mat</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="117" top="432" width="94" height="118" color="#000000" bgColor="#ffff80" fontSize="10">
+      <math optimize="2" decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">F</e>
+          <e type="operand">A</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">2</e>
+          <e type="operand" style="unit">kN</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">0</e>
+          <e type="operand">0</e>
+          <e type="operand">3</e>
+          <e type="operand" style="unit">kN</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">B</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">6</e>
+          <e type="operand">1</e>
+          <e type="function" args="8">mat</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="234" top="432" width="107" height="118" color="#000000" bgColor="#ffff80" fontSize="10">
+      <math optimize="2" decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">M</e>
+          <e type="operand">0</e>
+          <e type="operand">0</e>
+          <e type="operand">2</e>
+          <e type="operand" style="unit">kN</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">2</e>
+          <e type="operand" style="unit">kN</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">0</e>
+          <e type="operand">0</e>
+          <e type="operand">6</e>
+          <e type="operand">1</e>
+          <e type="function" args="8">mat</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="351" top="432" width="216" height="94" color="#000000" fontSize="10">
+      <plot type="2d" render="lines" scale_x="1.449459" scale_y="1.76238481450314" scale_z="16.9254492997728" rotate_x="0" rotate_y="0" rotate_z="0" transpose_x="-89" transpose_y="-15" transpose_z="0">
+        <input>
+          <e type="operand">x</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">q</e>
+          <e type="operand" style="unit">kN</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">X</e>
+          <e type="operand">0</e>
+          <e type="operand" style="string">x</e>
+          <e type="function" args="3">augment</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+        </input>
+      </plot>
+    </region>
+    <region left="0" top="612" width="522" height="23" color="#000000" fontSize="10">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Funktion für die Berechnung der Auflagerreaktionen aus dem Momentengleichgewicht</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="630" width="542" height="73" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">x.F</e>
+          <e type="operand">x.r</e>
+          <e type="function" args="2">F</e>
+          <e type="operand">1</e>
+          <e type="operand">x.r</e>
+          <e type="operand">x.F</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">x</e>
+          <e type="function" args="1">q</e>
+          <e type="operand">x.r</e>
+          <e type="operand">x</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">x</e>
+          <e type="operand">0</e>
+          <e type="operand">L</e>
+          <e type="function" args="4">int</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">F</e>
+          <e type="operand">j</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">x.r</e>
+          <e type="operand">X</e>
+          <e type="operand">j</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">M</e>
+          <e type="operand">j</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operand">j</e>
+          <e type="operand">1</e>
+          <e type="operand">X</e>
+          <e type="function" args="1">rows</e>
+          <e type="function" args="4">sum</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="702" width="130" height="23" color="#000000" fontSize="10">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Auflagerreaktionen </p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="729" width="46" height="24" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">A</e>
+          <e type="operand">0</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="81" top="729" width="46" height="24" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">B</e>
+          <e type="operand">0</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="153" top="729" width="191" height="35" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">A</e>
+          <e type="operand">X</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">X</e>
+          <e type="operand">6</e>
+          <e type="function" args="2">el</e>
+          <e type="function" args="2">F</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">1500</e>
+          <e type="operand" style="unit">N</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="369" top="729" width="191" height="35" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">B</e>
+          <e type="operand">X</e>
+          <e type="operand">6</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">X</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">el</e>
+          <e type="function" args="2">F</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">1980</e>
+          <e type="operand" style="unit">N</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="765" width="579" height="23" color="#000000" fontSize="10">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Die Summe aller Einzelkräfte muss entgegengesetzt gleich der Streckenlastresultierenden sein.</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="792" width="181" height="38" color="#000000" fontSize="10">
+      <text lang="ger" width="181" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Summe aller Einzelkräfte einschließlich Reaktionen</p>
+        </content>
+      </text>
+    </region>
+    <region left="207" top="792" width="168" height="23" color="#000000" fontSize="10">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Streckenlastresultierende </p>
+        </content>
+      </text>
+    </region>
+    <region left="198" top="810" width="144" height="69" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">x</e>
+          <e type="function" args="1">q</e>
+          <e type="operand">x</e>
+          <e type="operand">0</e>
+          <e type="operand">L</e>
+          <e type="function" args="4">int</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">4480</e>
+          <e type="operand" style="unit">N</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="18" top="828" width="124" height="37" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">F</e>
+          <e type="function" args="1">sum</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">4480</e>
+          <e type="operand" style="unit">N</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region top="873" color="#000000">
+      <area single="true" collapsed="true" />
+    </region>
+    <region left="0" top="891" width="370" height="23" color="#000000" fontSize="10">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Integration der Streckenlast mit dem Runge-Kutta-Verfahren</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="918" width="197" height="38" color="#000000" fontSize="10">
+      <text lang="ger" width="197" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Differenzialgleichungen und Anfangsbedingungen</p>
+        </content>
+      </text>
+    </region>
+    <region left="207" top="918" width="90" height="38" color="#000000" fontSize="10">
+      <text lang="ger" width="90" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Gesuchte Funktionen</p>
+        </content>
+      </text>
+    </region>
+    <region left="297" top="918" width="111" height="38" color="#000000" fontSize="10">
+      <text lang="ger" width="100" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Obergrenze der Integration</p>
+        </content>
+      </text>
+    </region>
+    <region left="414" top="918" width="179" height="23" color="#000000" fontSize="10">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Zahl der Integrationsschritte</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="954" width="183" height="89" color="#000000" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">DGL</e>
+          <e type="operand">x</e>
+          <e type="function" args="1">Q'</e>
+          <e type="operand">x</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">q</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">≡</e>
+          <e type="operand">x</e>
+          <e type="function" args="1">M'</e>
+          <e type="operand">x</e>
+          <e type="function" args="1">Q</e>
+          <e type="operator" args="2">≡</e>
+          <e type="operand">0</e>
+          <e type="function" args="1">Q</e>
+          <e type="operand">0</e>
+          <e type="operator" args="2">≡</e>
+          <e type="operand">0</e>
+          <e type="function" args="1">M</e>
+          <e type="operand">0</e>
+          <e type="operator" args="2">≡</e>
+          <e type="operand">4</e>
+          <e type="operand">1</e>
+          <e type="function" args="6">sys</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="207" top="972" width="82" height="49" color="#000000" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">f</e>
+          <e type="operand">x</e>
+          <e type="function" args="1">Q</e>
+          <e type="operand">x</e>
+          <e type="function" args="1">M</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="306" top="972" width="71" height="41" color="#000000" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">x.max</e>
+          <e type="operand">L</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="414" top="972" width="87" height="30" color="#000000" fontSize="10">
+      <math optimize="2" decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">n.step</e>
+          <e type="operand">200</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="522" top="1026" width="20" height="24" color="#000000" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">x</e>
+        </input>
+      </math>
+    </region>
+    <region left="549" top="1026" width="20" height="24" color="#000000" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">Q</e>
+        </input>
+      </math>
+    </region>
+    <region left="567" top="1026" width="20" height="24" color="#000000" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">M</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="1044" width="203" height="38" color="#000000" fontSize="10">
+      <text lang="ger" width="203" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Numerische Lösung mit dem Runge-Kutta-Verfahren (RK4)</p>
+        </content>
+      </text>
+    </region>
+    <region left="225" top="1044" width="246" height="32" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">D</e>
+          <e type="operand">DGL</e>
+          <e type="operand">f</e>
+          <e type="operand">x.max</e>
+          <e type="operand">n.step</e>
+          <e type="function" args="4">rkfixed</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="477" top="1044" width="119" height="96" color="#000000" fontSize="10">
+      <math decimalPlaces="3" matrixOptions="0,0,3,4">
+        <input>
+          <e type="operand">D</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0</e>
+          <e type="operand">0</e>
+          <e type="operand">0</e>
+          <e type="operand">0.035</e>
+          <e type="operand">0</e>
+          <e type="operand">0</e>
+          <e type="operand">0.07</e>
+          <e type="operand">0</e>
+          <e type="operand">0</e>
+          <e type="operand">0.105</e>
+          <e type="operand">0</e>
+          <e type="operand">0</e>
+          <e type="operand">4</e>
+          <e type="operand">3</e>
+          <e type="function" args="14">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="1107" width="385" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Verläufe von Querkraft und Biegemoment (nur Anteil aus q(x) )</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="1143" width="169" height="81" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">x.s</e>
+          <e type="operand">Q.s</e>
+          <e type="operand">M.s</e>
+          <e type="operand">3</e>
+          <e type="operand">1</e>
+          <e type="function" args="5">mat</e>
+          <e type="operand">D</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">col</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">D</e>
+          <e type="operand">2</e>
+          <e type="function" args="2">col</e>
+          <e type="operand" style="unit">N</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">D</e>
+          <e type="operand">3</e>
+          <e type="function" args="2">col</e>
+          <e type="operand" style="unit">N</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">3</e>
+          <e type="operand">1</e>
+          <e type="function" args="5">mat</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="180" top="1143" width="163" height="61" color="#000000" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">P</e>
+          <e type="operand">x.s</e>
+          <e type="operand">Q.s</e>
+          <e type="function" args="2">augment</e>
+          <e type="operand">x.s</e>
+          <e type="operand">M.s</e>
+          <e type="function" args="2">augment</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="360" top="1143" width="240" height="99" color="#000000" fontSize="10">
+      <plot type="2d" render="lines" scale_x="0.000863689359045316" scale_y="2.01814631309311" scale_z="0.00432183727875157" rotate_x="0" rotate_y="0" rotate_z="0" transpose_x="-105" transpose_y="41" transpose_z="0">
+        <input>
+          <e type="operand">P</e>
+        </input>
+      </plot>
+    </region>
+    <region left="558" top="1152" width="26" height="30" color="#ff0000" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">M.q</e>
+        </input>
+      </math>
+    </region>
+    <region left="504" top="1170" width="26" height="30" color="#0000ff" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">Q.q</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="1278" width="354" height="40" color="#000000" fontSize="10">
+      <text lang="ger" width="353" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Beiträge der Einzellasten zu den Datenvektoren hinzufügen \[REGION[59f7aced253847f1bfe1f75283dcc3b0]]\ läuft über alle Datenpunkte (Zeilen von \[REGION[482323a9663c41f0b548f8a004ae24ca]]\) </p>
+        </content>
+        <regions>
+          <region id="59f7aced253847f1bfe1f75283dcc3b0" left="71" top="15" width="20" height="24" color="#000000" fontSize="10">
+            <math decimalPlaces="3">
+              <input>
+                <e type="operand">k</e>
+              </input>
+            </math>
+          </region>
+          <region id="482323a9663c41f0b548f8a004ae24ca" left="320" top="15" width="20" height="24" color="#000000" fontSize="10">
+            <math decimalPlaces="3">
+              <input>
+                <e type="operand">D</e>
+              </input>
+            </math>
+          </region>
+        </regions>
+      </text>
+    </region>
+    <region left="378" top="1287" width="134" height="28" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">k</e>
+          <e type="operand">1</e>
+          <e type="operand">D</e>
+          <e type="function" args="1">rows</e>
+          <e type="function" args="2">range</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="1314" width="273" height="71" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">Q.s</e>
+          <e type="operand">k</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">Q.s</e>
+          <e type="operand">k</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">F</e>
+          <e type="operand">j</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">x.s</e>
+          <e type="operand">k</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">X</e>
+          <e type="operand">j</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">&gt;</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">j</e>
+          <e type="operand">1</e>
+          <e type="operand">X</e>
+          <e type="function" args="1">rows</e>
+          <e type="function" args="4">sum</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="306" top="1332" width="217" height="38" color="#000000" fontSize="10">
+      <text lang="ger" width="217" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Die Summen laufen über alle Lasteinleitungspunkte</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="1386" width="412" height="71" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">M.s</e>
+          <e type="operand">k</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">M.s</e>
+          <e type="operand">k</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">F</e>
+          <e type="operand">j</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">x.s</e>
+          <e type="operand">k</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">X</e>
+          <e type="operand">j</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">M</e>
+          <e type="operand">j</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operand">x.s</e>
+          <e type="operand">k</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">X</e>
+          <e type="operand">j</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">&gt;</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">j</e>
+          <e type="operand">1</e>
+          <e type="operand">X</e>
+          <e type="function" args="1">rows</e>
+          <e type="function" args="4">sum</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="1467" width="179" height="150" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">P</e>
+          <e type="operand">x</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">q</e>
+          <e type="operand" style="unit">kN</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">x.s</e>
+          <e type="operand">Q.s</e>
+          <e type="operand" style="unit">kN</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="2">augment</e>
+          <e type="operand">x.s</e>
+          <e type="operand">M.s</e>
+          <e type="operand" style="unit">kN</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="2">augment</e>
+          <e type="operand">3</e>
+          <e type="operand">1</e>
+          <e type="function" args="5">sys</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="198" top="1467" width="362" height="157" color="#000000" fontSize="10">
+      <plot type="2d" render="lines" scale_x="2.29519466154737" scale_y="3.18021734706095" scale_z="0.716284952520857" rotate_x="0" rotate_y="0" rotate_z="0" transpose_x="-160" transpose_y="-3" transpose_z="0">
+        <input>
+          <e type="operand">P</e>
+        </input>
+      </plot>
+    </region>
+    <region left="378" top="1476" width="45" height="26" color="#ff0000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">x</e>
+          <e type="function" args="1">Q</e>
+        </input>
+      </math>
+    </region>
+    <region left="459" top="1476" width="45" height="26" color="#0000ff" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">x</e>
+          <e type="function" args="1">q</e>
+        </input>
+      </math>
+    </region>
+    <region left="297" top="1485" width="45" height="26" color="#008000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">x</e>
+          <e type="function" args="1">M</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="1638" width="211" height="23" color="#000000" fontSize="10">
+      <text lang="ger" width="211" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Extremwerte des Biegemoments:</p>
+        </content>
+      </text>
+    </region>
+    <region left="243" top="1638" width="146" height="32" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">M.s</e>
+          <e type="function" args="1">max</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">kN</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">1.49</e>
+        </result>
+      </math>
+    </region>
+    <region left="396" top="1638" width="159" height="32" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">M.s</e>
+          <e type="function" args="1">min</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">kN</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">1.49</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="639" top="1638" width="435" height="23" color="#000000" fontSize="10">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Alternative zum Einstellungsmenü, von dort per Kontextmenü kopierbar</p>
+        </content>
+      </text>
+    </region>
+    <region left="639" top="1665" width="293" height="154" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">labels</e>
+          <e type="operand" style="string">XYPlot'Labels</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">\007B\labels\007D\\0027\XLabel</e>
+          <e type="operand" style="string">Position x in m</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">\007B\labels\007D\\0027\YLabel</e>
+          <e type="operand" style="string">y</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">\007B\labels\007D\\0027\Y2Label</e>
+          <e type="operand" style="string">y2</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">\007B\labels\007D\\0027\LabelFont</e>
+          <e type="operand" style="string">Arial, 10pt</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">\007B\labels\007D\\0027\LabelFontColor</e>
+          <e type="operand" style="string">Black</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">\007B\labels\007D\\0027\TickFont</e>
+          <e type="operand" style="string">Arial, 8pt</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">\007B\labels\007D\\0027\TickFontColor</e>
+          <e type="operand" style="string">Black</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">8</e>
+          <e type="operand">1</e>
+          <e type="function" args="10">line</e>
+        </input>
+      </math>
+    </region>
+    <region left="126" top="1683" width="457" height="222" color="#000000" fontSize="10">
+      <xyplot animFrameRate="20" animPlaybackMode="RepeatIndefinitely" width="447" height="214" points="400" name="XYPlot" keepAspectRatio="false">
+        <chartstyle usedefault="false" backcolor="White" bordercolor="Black" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
+        <xaxes xmin="-0.217226" xmax="7.482774" xtick="1" visible="True" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-2.686916" ymax="2.313084" ytick="1" visible="True" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="" titlefont="Arial, 10pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Arial, 8pt" tickfontcolor="Black" xlabel="Position x in m" ylabel="y" y2label="y2" />
+        <legend isbordervisible="false" islegendvisible="true" legendbackcolor="Transparent" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="SouthWest" textcolor="Black" />
+        <traces>
+          <trace seriesname="q in kN/m" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" fillmode="Auto" filltotrace="-1" filled="true" hatched="false" fillcolor="64, 0, 0, 255" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="Q in kN" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Red" linethickness="1" linepattern="Solid" fillmode="Auto" filltotrace="-1" filled="true" hatched="false" fillcolor="64, 255, 0, 0" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="M in kNm" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Green" linethickness="1" linepattern="Solid" fillmode="Auto" filltotrace="-1" filled="true" hatched="false" fillcolor="64, 0, 128, 0" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Labels" lineantialias="true" linecolor="Fuchsia" linethickness="1" linepattern="Solid" fillmode="Auto" filltotrace="-1" filled="false" hatched="false" fillcolor="64, 255, 0, 255" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">P</e>
+          <e type="operand">0</e>
+          <e type="operand">0</e>
+          <e type="operand" style="string">+</e>
+          <e type="operand">2000</e>
+          <e type="operand">1</e>
+          <e type="operand">4</e>
+          <e type="function" args="6">mat</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+        </input>
+      </xyplot>
+    </region>
+  </regions>
+</worksheet>
