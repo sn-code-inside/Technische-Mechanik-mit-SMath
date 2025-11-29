@@ -1,0 +1,1951 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Solver" version="1.3.0.9126"?>
+<worksheet xmlns="http://smath.info/schemas/worksheet/1.0">
+  <settings ppi="96">
+    <identity>
+      <id>83e9d9da-234f-4be2-8e66-1c20381f6dbc</id>
+      <revision>2</revision>
+    </identity>
+    <metadata lang="ger">
+      <author>Martin Kraska</author>
+    </metadata>
+    <calculation>
+      <precision>4</precision>
+      <exponentialThreshold>5</exponentialThreshold>
+      <trailingZeros>false</trailingZeros>
+      <significantDigitsMode>false</significantDigitsMode>
+      <mixedNumbers>false</mixedNumbers>
+      <roundingMode>0</roundingMode>
+      <approximateEqualAccuracy>3</approximateEqualAccuracy>
+      <fractions>decimal</fractions>
+    </calculation>
+    <pageModel active="false" viewMode="2" printGrid="false" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true" hideElementsHighlightings="true">
+      <paper id="9" orientation="Portrait" width="827" height="1169" />
+      <margins left="39" right="39" top="49" bottom="49" />
+      <header alignment="Center" color="#a9a9a9">&amp;[DATE] &amp;[TIME] - &amp;[FILENAME]</header>
+      <footer alignment="Center" color="#a9a9a9">&amp;[PAGENUM] / &amp;[COUNT]</footer>
+      <backgrounds />
+    </pageModel>
+    <dependencies>
+      <assembly name="SMath Core" version="1.73.9126.0" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="MathRegion" version="1.73.9126.0" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="PictureRegion" version="1.73.9126.0" guid="06b5df04-393e-4be7-9107-305196fcb861" />
+      <assembly name="CustomFunctions" version="1.2.9372.30444" guid="18dadffd-79a3-4cf9-aee1-d66deb0ea720" />
+      <assembly name="SpecialFunctions" version="1.73.9126.0" guid="2814e667-4e12-48b1-8d51-194e480eabc5" />
+      <assembly name="DotNumerics" version="1.1.8269.16536" guid="2a69099d-3185-4ea7-a130-65f2bf94c8d6" />
+      <assembly name="MaximaPlugin" version="1.98.8797.27896" guid="44011c1e-5d0d-4533-8e68-e32b5badce41" />
+      <assembly name="TextRegion" version="1.73.9126.0" guid="485d28c5-349a-48b6-93be-12a35a1c1e39" />
+    </dependencies>
+  </settings>
+  <regions type="content">
+    <region left="0" top="0" width="132" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="ger" width="100" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Spannungszustand </p>
+        </content>
+      </text>
+    </region>
+    <region left="270" top="0" width="230" height="169" color="#000000">
+      <picture>
+        <raw format="png" encoding="base64">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</raw>
+      </picture>
+    </region>
+    <region left="9" top="27" width="89" height="30" color="#000000" bgColor="#ffff80" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">σ.x</e>
+          <e type="operand">50</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="63" width="101" height="30" color="#000000" bgColor="#ffff80" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">σ.y</e>
+          <e type="operand">20</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="99" width="95" height="30" color="#000000" bgColor="#ffff80" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">τ.xy</e>
+          <e type="operand">30</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="171" width="231" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Hauptspannungen und Hauptachsen</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="198" width="250" height="60" color="#000000" fontSize="10">
+      <math optimize="2" decimalPlaces="3">
+        <input>
+          <e type="operand">σ.1</e>
+          <e type="operand">σ.x</e>
+          <e type="operand">σ.y</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">σ.x</e>
+          <e type="operand">σ.y</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand">τ.xy</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="1">sqrt</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="279" top="225" width="102" height="30" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">σ.1</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">61.1</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="261" width="249" height="60" color="#000000" fontSize="10">
+      <math optimize="2" decimalPlaces="3">
+        <input>
+          <e type="operand">σ.2</e>
+          <e type="operand">σ.x</e>
+          <e type="operand">σ.y</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">σ.x</e>
+          <e type="operand">σ.y</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand">τ.xy</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="1">sqrt</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="279" top="288" width="115" height="30" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">σ.2</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">31.1</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="324" width="143" height="55" color="#000000" fontSize="10">
+      <math optimize="2" decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">φ.1</e>
+          <e type="operand">τ.xy</e>
+          <e type="operand">σ.x</e>
+          <e type="operand">σ.2</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">atan</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="279" top="333" width="86" height="30" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">φ.1</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">20.3</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="396" width="219" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Drehung des Koordinatensystems </p>
+        </content>
+      </text>
+    </region>
+    <region left="234" top="396" width="66" height="24" color="#000000" bgColor="#ffff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">φ</e>
+          <e type="operand">30</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="432" width="230" height="23" color="#000000" fontSize="10">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Mit den Transformationsgleichungen</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="459" width="354" height="47" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">σ.ξ</e>
+          <e type="operand">σ.x</e>
+          <e type="operand">σ.y</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">σ.x</e>
+          <e type="operand">σ.y</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">2</e>
+          <e type="operand">φ</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">τ.xy</e>
+          <e type="operand">2</e>
+          <e type="operand">φ</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="396" top="477" width="102" height="30" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">σ.ξ</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">58.5</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="504" width="351" height="47" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">σ.η</e>
+          <e type="operand">σ.x</e>
+          <e type="operand">σ.y</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">σ.x</e>
+          <e type="operand">σ.y</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">2</e>
+          <e type="operand">φ</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">τ.xy</e>
+          <e type="operand">2</e>
+          <e type="operand">φ</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="396" top="513" width="115" height="30" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">σ.η</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">28.5</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="549" width="316" height="49" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">τ.ξη</e>
+          <e type="operand">σ.x</e>
+          <e type="operand">σ.y</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="1">-</e>
+          <e type="bracket">(</e>
+          <e type="operand">2</e>
+          <e type="operand">φ</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">τ.xy</e>
+          <e type="operand">2</e>
+          <e type="operand">φ</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="396" top="558" width="121" height="30" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">τ.ξη</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">15.3</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="603" width="153" height="23" color="#000000" fontSize="10">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Mit Basistransformation</p>
+        </content>
+      </text>
+    </region>
+    <region left="81" top="630" width="171" height="49" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">R</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">cos</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">sin</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">cos</e>
+          <e type="operand">2</e>
+          <e type="operand">2</e>
+          <e type="function" args="6">mat</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="639" width="66" height="24" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">φ</e>
+          <e type="operand">30</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="684" width="366" height="57" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">σ.ξ</e>
+          <e type="operand">τ.ξη</e>
+          <e type="operand">τ.ξη</e>
+          <e type="operand">σ.η</e>
+          <e type="operand">2</e>
+          <e type="operand">2</e>
+          <e type="function" args="6">mat</e>
+          <e type="operand">R</e>
+          <e type="function" args="1">transpose</e>
+          <e type="operand">σ.x</e>
+          <e type="operand">τ.xy</e>
+          <e type="operand">τ.xy</e>
+          <e type="operand">σ.y</e>
+          <e type="operand">2</e>
+          <e type="operand">2</e>
+          <e type="function" args="6">mat</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">R</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">58.5</e>
+          <e type="operand">15.3</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">15.3</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">28.5</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">2</e>
+          <e type="operand">2</e>
+          <e type="function" args="6">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="387" top="684" width="102" height="30" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">σ.ξ</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">58.5</e>
+        </result>
+      </math>
+    </region>
+    <region left="387" top="720" width="115" height="30" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">σ.η</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">28.5</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="387" top="756" width="121" height="30" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">τ.ξη</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">15.3</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="792" width="371" height="23" color="#000000" fontSize="10">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Hauptspannungen direkt als Lösung des Eigenwertproblems</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="819" width="231" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Spannungsmatrix und Einheitsmatrix</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="846" width="215" height="57" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">S</e>
+          <e type="operand">σ.x</e>
+          <e type="operand">τ.xy</e>
+          <e type="operand">τ.xy</e>
+          <e type="operand">σ.y</e>
+          <e type="operand">2</e>
+          <e type="operand">2</e>
+          <e type="function" args="6">mat</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="symbolic">
+          <e type="operand">50</e>
+          <e type="operand">30</e>
+          <e type="operand">30</e>
+          <e type="operand">20</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">2</e>
+          <e type="operand">2</e>
+          <e type="function" args="6">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="234" top="855" width="179" height="45" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">I</e>
+          <e type="operand">2</e>
+          <e type="function" args="1">identity</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">1</e>
+          <e type="operand">0</e>
+          <e type="operand">0</e>
+          <e type="operand">1</e>
+          <e type="operand">2</e>
+          <e type="operand">2</e>
+          <e type="function" args="6">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="909" width="223" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Eigenwerte und Hauptspannungen </p>
+        </content>
+      </text>
+    </region>
+    <region left="432" top="927" width="263" height="53" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="ger" width="256" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Determinante und Betrag haben die gleiche Operatordarstellung. Hier wird die Determinante gebraucht.</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="936" width="412" height="45" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">λ</e>
+          <e type="operand">S</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">λ</e>
+          <e type="operand">I</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">-</e>
+          <e type="function" args="1">det</e>
+          <e type="operand">λ</e>
+          <e type="operand">100</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">100</e>
+          <e type="function" args="4">solve</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">31.1</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">61.1</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="981" width="94" height="31" color="#000000" fontSize="10">
+      <math optimize="2" decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">σ.1</e>
+          <e type="operand">λ</e>
+          <e type="function" args="1">max</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="117" top="981" width="102" height="30" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">σ.1</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">61.1</e>
+        </result>
+      </math>
+    </region>
+    <region left="441" top="990" width="153" height="65" color="#000000">
+      <picture>
+        <raw format="png" encoding="base64">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</raw>
+      </picture>
+    </region>
+    <region left="9" top="1008" width="94" height="31" color="#000000" fontSize="10">
+      <math optimize="2" decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">σ.2</e>
+          <e type="operand">λ</e>
+          <e type="function" args="1">min</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="117" top="1008" width="115" height="30" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">σ.2</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">31.1</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="1080" width="399" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="ger" width="399" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Neigungswinkel der 1-Achse</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="1098" width="351" height="62" color="#000000" fontSize="10">
+      <math optimize="2" decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">φ.1</e>
+          <e type="operand">S</e>
+          <e type="operand">σ.1</e>
+          <e type="operand">I</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">cos</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">sin</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+          <e type="operator" args="2">*</e>
+          <e type="bracket">(</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">φ</e>
+          <e type="operand">π</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">π</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="4">solve</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="396" top="1107" width="86" height="30" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">φ.1</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">20.3</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="1161" width="208" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Numerische Lösung mit Maxima </p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="1188" width="130" height="45" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">S</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">50</e>
+          <e type="operand">30</e>
+          <e type="operand">30</e>
+          <e type="operand">20</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">2</e>
+          <e type="operand">2</e>
+          <e type="function" args="6">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="1233" width="121" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Eigenwertproblem</p>
+        </content>
+      </text>
+    </region>
+    <region left="36" top="1233" width="363" height="84" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">S</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">eigens_by_jacobi</e>
+          <e type="function" args="1">Maxima</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">61.1</e>
+          <e type="operand">31.1</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">0.938</e>
+          <e type="operand">0.347</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">0.347</e>
+          <e type="operand">0.938</e>
+          <e type="operand">2</e>
+          <e type="operand">2</e>
+          <e type="function" args="6">mat</e>
+          <e type="operand">3</e>
+          <e type="operand">1</e>
+          <e type="function" args="5">sys</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="1305" width="84" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Eigenwerte </p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="1323" width="390" height="55" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">λ</e>
+          <e type="operand">S</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">eigens_by_jacobi</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">el</e>
+          <e type="function" args="1">Maxima</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">61.1</e>
+          <e type="operand">31.1</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="1377" width="180" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Eigenvektoren spaltenweise</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="1395" width="395" height="55" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">Φ</e>
+          <e type="operand">S</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">eigens_by_jacobi</e>
+          <e type="operand">2</e>
+          <e type="function" args="2">el</e>
+          <e type="function" args="1">Maxima</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.938</e>
+          <e type="operand">0.347</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">0.347</e>
+          <e type="operand">0.938</e>
+          <e type="operand">2</e>
+          <e type="operand">2</e>
+          <e type="function" args="6">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="1449" width="297" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="ger" width="297" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Sortierung der Eigenwerte und  Eigenvektoren</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="1467" width="480" height="100" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">M</e>
+          <e type="operand">λ</e>
+          <e type="function" args="1">sys2mat</e>
+          <e type="operand">Φ</e>
+          <e type="function" args="1">transpose</e>
+          <e type="function" args="2">augment</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">6.11</e>
+          <e type="operand">10</e>
+          <e type="operand">7</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">kg</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operand" style="unit">s</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">0.938</e>
+          <e type="operand">0.347</e>
+          <e type="operand">3.11</e>
+          <e type="operand">10</e>
+          <e type="operand">7</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">kg</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operand" style="unit">s</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">0.347</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">0.938</e>
+          <e type="operand">2</e>
+          <e type="operand">3</e>
+          <e type="function" args="8">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="1566" width="444" height="100" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">σ.2</e>
+          <e type="operand">x.2</e>
+          <e type="operand">y.2</e>
+          <e type="operand">σ.1</e>
+          <e type="operand">x.1</e>
+          <e type="operand">y.1</e>
+          <e type="operand">2</e>
+          <e type="operand">3</e>
+          <e type="function" args="8">mat</e>
+          <e type="operand">M</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">csort</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">3.11</e>
+          <e type="operand">10</e>
+          <e type="operand">7</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">kg</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operand" style="unit">s</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">0.347</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">0.938</e>
+          <e type="operand">6.11</e>
+          <e type="operand">10</e>
+          <e type="operand">7</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">kg</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operand" style="unit">s</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">0.938</e>
+          <e type="operand">0.347</e>
+          <e type="operand">2</e>
+          <e type="operand">3</e>
+          <e type="function" args="8">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="459" top="1593" width="137" height="53" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="ger" width="137" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Kontextmenü&gt; Optimieriung&gt; Numerisch</p>
+        </content>
+      </text>
+    </region>
+    <region left="252" top="1665" width="172" height="55" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">φ.1</e>
+          <e type="operand">y.1</e>
+          <e type="operand">x.1</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">atan</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">20.3</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="1674" width="102" height="30" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">σ.1</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">61.1</e>
+        </result>
+      </math>
+    </region>
+    <region left="126" top="1674" width="115" height="30" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">σ.2</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">31.1</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="1746" width="235" height="23" color="#000000" fontSize="10">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: normal;">Numerische Lösung mit DotNumerics</p>
+        </content>
+      </text>
+    </region>
+    <region left="234" top="1755" width="374" height="45" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">λ</e>
+          <e type="operand">S</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">dn_LinAlgEigenvalues</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">61.1</e>
+          <e type="operand">31.1</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="1764" width="84" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Eigenwerte </p>
+        </content>
+      </text>
+    </region>
+    <region left="234" top="1800" width="362" height="45" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">Φ</e>
+          <e type="operand">S</e>
+          <e type="function" args="1">dn_LinAlgEigenvectors</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.938</e>
+          <e type="operand">0.347</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">0.347</e>
+          <e type="operand">0.938</e>
+          <e type="operand">2</e>
+          <e type="operand">2</e>
+          <e type="function" args="6">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="1809" width="180" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Eigenvektoren spaltenweise</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="1845" width="72" height="23" color="#000000" fontSize="10">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Sortieren </p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="1872" width="408" height="100" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">M</e>
+          <e type="operand">λ</e>
+          <e type="operand">Φ</e>
+          <e type="function" args="1">transpose</e>
+          <e type="function" args="2">augment</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">6.11</e>
+          <e type="operand">10</e>
+          <e type="operand">7</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">kg</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operand" style="unit">s</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">0.938</e>
+          <e type="operand">0.347</e>
+          <e type="operand">3.11</e>
+          <e type="operand">10</e>
+          <e type="operand">7</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">kg</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operand" style="unit">s</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">0.347</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">0.938</e>
+          <e type="operand">2</e>
+          <e type="operand">3</e>
+          <e type="function" args="8">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="1971" width="444" height="100" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">σ.2</e>
+          <e type="operand">x.2</e>
+          <e type="operand">y.2</e>
+          <e type="operand">σ.1</e>
+          <e type="operand">x.1</e>
+          <e type="operand">y.1</e>
+          <e type="operand">2</e>
+          <e type="operand">3</e>
+          <e type="function" args="8">mat</e>
+          <e type="operand">M</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">csort</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">3.11</e>
+          <e type="operand">10</e>
+          <e type="operand">7</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">kg</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operand" style="unit">s</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">0.347</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">0.938</e>
+          <e type="operand">6.11</e>
+          <e type="operand">10</e>
+          <e type="operand">7</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">kg</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operand" style="unit">s</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">0.938</e>
+          <e type="operand">0.347</e>
+          <e type="operand">2</e>
+          <e type="operand">3</e>
+          <e type="function" args="8">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="459" top="1998" width="137" height="53" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="ger" width="137" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Kontextmenü&gt; Optimieriung&gt; Numerisch</p>
+        </content>
+      </text>
+    </region>
+    <region left="252" top="2070" width="172" height="55" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">φ.1</e>
+          <e type="operand">y.1</e>
+          <e type="operand">x.1</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">atan</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">20.3</e>
+        </result>
+      </math>
+    </region>
+    <region left="18" top="2088" width="102" height="30" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">σ.1</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">61.1</e>
+        </result>
+      </math>
+    </region>
+    <region left="126" top="2088" width="115" height="30" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">σ.2</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">31.1</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="2142" width="428" height="23" color="#000000" fontSize="10">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Bonusmaterial: Größter Eigenwert und Hauptachse mit Vektoriteration</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="2178" width="130" height="45" color="#000000" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">S</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">50</e>
+          <e type="operand">30</e>
+          <e type="operand">30</e>
+          <e type="operand">20</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">2</e>
+          <e type="operand">2</e>
+          <e type="function" args="6">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="144" top="2178" width="67" height="45" color="#000000" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">n.0</e>
+          <e type="operand">1</e>
+          <e type="operand">0</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="2232" width="164" height="45" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">S</e>
+          <e type="operand">n.0</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">50.0</e>
+          <e type="operand">30.0</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="198" top="2232" width="186" height="31" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">σ.1</e>
+          <e type="operand">n</e>
+          <e type="function" args="1">norme</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">58.3</e>
+        </result>
+      </math>
+    </region>
+    <region left="405" top="2232" width="136" height="49" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">n.0</e>
+          <e type="operand">n</e>
+          <e type="operand">σ.1</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.857</e>
+          <e type="operand">0.514</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="549" top="2232" width="158" height="61" color="#000000" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">2</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">n</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">atan</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">30.964</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="2286" width="164" height="45" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">S</e>
+          <e type="operand">n.0</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">58.3</e>
+          <e type="operand">15.4</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="198" top="2286" width="186" height="31" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">σ.1</e>
+          <e type="operand">n</e>
+          <e type="function" args="1">norme</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">60.3</e>
+        </result>
+      </math>
+    </region>
+    <region left="405" top="2286" width="136" height="49" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">n.0</e>
+          <e type="operand">n</e>
+          <e type="operand">σ.1</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.967</e>
+          <e type="operand">0.256</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="549" top="2286" width="158" height="61" color="#000000" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">2</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">n</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">atan</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">14.826</e>
+        </result>
+      </math>
+    </region>
+    <region left="549" top="2286" width="158" height="61" color="#000000" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">2</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">n</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">atan</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">14.826</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="2340" width="164" height="45" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">S</e>
+          <e type="operand">n.0</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">56.0</e>
+          <e type="operand">23.9</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="198" top="2340" width="186" height="31" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">σ.1</e>
+          <e type="operand">n</e>
+          <e type="function" args="1">norme</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">60.9</e>
+        </result>
+      </math>
+    </region>
+    <region left="405" top="2340" width="136" height="49" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">n.0</e>
+          <e type="operand">n</e>
+          <e type="operand">σ.1</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.920</e>
+          <e type="operand">0.392</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="549" top="2340" width="158" height="61" color="#000000" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">2</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">n</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">atan</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">23.093</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="2394" width="164" height="45" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">S</e>
+          <e type="operand">n.0</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">57.8</e>
+          <e type="operand">19.8</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="198" top="2394" width="186" height="31" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">σ.1</e>
+          <e type="operand">n</e>
+          <e type="function" args="1">norme</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">61.0</e>
+        </result>
+      </math>
+    </region>
+    <region left="405" top="2394" width="136" height="49" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">n.0</e>
+          <e type="operand">n</e>
+          <e type="operand">σ.1</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.946</e>
+          <e type="operand">0.324</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="549" top="2394" width="158" height="61" color="#000000" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">2</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">n</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">atan</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">18.878</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="2448" width="164" height="45" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">S</e>
+          <e type="operand">n.0</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">57.0</e>
+          <e type="operand">21.9</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="198" top="2448" width="186" height="31" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">σ.1</e>
+          <e type="operand">n</e>
+          <e type="function" args="1">norme</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">61.1</e>
+        </result>
+      </math>
+    </region>
+    <region left="405" top="2448" width="136" height="49" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">n.0</e>
+          <e type="operand">n</e>
+          <e type="operand">σ.1</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.933</e>
+          <e type="operand">0.359</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="549" top="2448" width="158" height="61" color="#000000" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">2</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">n</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">atan</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">21.025</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="2502" width="164" height="45" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">S</e>
+          <e type="operand">n.0</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">57.4</e>
+          <e type="operand">20.8</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="198" top="2502" width="186" height="31" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">σ.1</e>
+          <e type="operand">n</e>
+          <e type="function" args="1">norme</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">61.1</e>
+        </result>
+      </math>
+    </region>
+    <region left="405" top="2502" width="136" height="49" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">n.0</e>
+          <e type="operand">n</e>
+          <e type="operand">σ.1</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.940</e>
+          <e type="operand">0.341</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="549" top="2502" width="158" height="61" color="#000000" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">2</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">n</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">atan</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">19.932</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="2556" width="164" height="45" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">S</e>
+          <e type="operand">n.0</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">57.2</e>
+          <e type="operand">21.4</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="198" top="2556" width="186" height="31" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">σ.1</e>
+          <e type="operand">n</e>
+          <e type="function" args="1">norme</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">61.1</e>
+        </result>
+      </math>
+    </region>
+    <region left="405" top="2556" width="136" height="49" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">n.0</e>
+          <e type="operand">n</e>
+          <e type="operand">σ.1</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.937</e>
+          <e type="operand">0.350</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="549" top="2556" width="158" height="61" color="#000000" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">2</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">n</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">atan</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">20.488</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="2610" width="164" height="45" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">S</e>
+          <e type="operand">n.0</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">57.3</e>
+          <e type="operand">21.1</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="198" top="2610" width="186" height="31" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">σ.1</e>
+          <e type="operand">n</e>
+          <e type="function" args="1">norme</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">61.1</e>
+        </result>
+      </math>
+    </region>
+    <region left="405" top="2610" width="136" height="49" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">n.0</e>
+          <e type="operand">n</e>
+          <e type="operand">σ.1</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.938</e>
+          <e type="operand">0.345</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="549" top="2610" width="158" height="61" color="#000000" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">2</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">n</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">atan</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">20.205</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="2664" width="164" height="45" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">S</e>
+          <e type="operand">n.0</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">57.3</e>
+          <e type="operand">21.2</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="198" top="2664" width="186" height="31" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">σ.1</e>
+          <e type="operand">n</e>
+          <e type="function" args="1">norme</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">61.1</e>
+        </result>
+      </math>
+    </region>
+    <region left="405" top="2664" width="136" height="49" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
+        <input>
+          <e type="operand">n.0</e>
+          <e type="operand">n</e>
+          <e type="operand">σ.1</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.938</e>
+          <e type="operand">0.348</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="549" top="2664" width="158" height="61" color="#000000" fontSize="10">
+      <math decimalPlaces="3">
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">2</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">n</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">atan</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">20.349</e>
+        </result>
+      </math>
+    </region>
+  </regions>
+</worksheet>

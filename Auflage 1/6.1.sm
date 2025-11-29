@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Solver" version="1.3.0.9126"?>
+<worksheet xmlns="http://smath.info/schemas/worksheet/1.0">
+  <settings ppi="96">
+    <identity>
+      <id>8ebe741a-4143-4c0f-944e-7bb9ea80b501</id>
+      <revision>3</revision>
+    </identity>
+    <metadata lang="ger">
+      <author>Martin Kraska</author>
+    </metadata>
+    <calculation>
+      <precision>4</precision>
+      <exponentialThreshold>5</exponentialThreshold>
+      <trailingZeros>false</trailingZeros>
+      <significantDigitsMode>false</significantDigitsMode>
+      <mixedNumbers>false</mixedNumbers>
+      <roundingMode>0</roundingMode>
+      <approximateEqualAccuracy>3</approximateEqualAccuracy>
+      <fractions>decimal</fractions>
+    </calculation>
+    <pageModel active="false" viewMode="2" printGrid="false" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true" hideElementsHighlightings="true">
+      <paper id="9" orientation="Portrait" width="827" height="1169" />
+      <margins left="39" right="39" top="49" bottom="49" />
+      <header alignment="Center" color="#a9a9a9">&amp;[DATE] &amp;[TIME] - &amp;[FILENAME]</header>
+      <footer alignment="Center" color="#a9a9a9">&amp;[PAGENUM] / &amp;[COUNT]</footer>
+      <backgrounds />
+    </pageModel>
+    <dependencies>
+      <assembly name="SMath Core" version="1.73.9126.0" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="MathRegion" version="1.73.9126.0" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="PictureRegion" version="1.73.9126.0" guid="06b5df04-393e-4be7-9107-305196fcb861" />
+      <assembly name="SpecialFunctions" version="1.73.9126.0" guid="2814e667-4e12-48b1-8d51-194e480eabc5" />
+      <assembly name="TextRegion" version="1.73.9126.0" guid="485d28c5-349a-48b6-93be-12a35a1c1e39" />
+      <assembly name="X-Y Plot Region (JXCharts)" version="0.4.9441.40064" guid="c12231ec-4873-43c1-a7d0-a167ebd17066" />
+    </dependencies>
+  </settings>
+  <regions type="content">
+    <region left="0" top="0" width="326" height="140" color="#000000">
+      <picture>
+        <raw format="png" encoding="base64">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</raw>
+      </picture>
+    </region>
+    <region left="342" top="9" width="74" height="24" color="#000000" bgColor="#ffff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">F</e>
+          <e type="operand">100</e>
+          <e type="operand" style="unit">N</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="423" top="9" width="74" height="24" color="#000000" bgColor="#ffff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">G</e>
+          <e type="operand">200</e>
+          <e type="operand" style="unit">N</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="513" top="9" width="68" height="30" color="#000000" bgColor="#ffff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">μ.0</e>
+          <e type="operand">0.3</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="342" top="45" width="68" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Haftkraft </p>
+        </content>
+      </text>
+    </region>
+    <region left="441" top="45" width="156" height="26" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">α</e>
+          <e type="function" args="1">H</e>
+          <e type="operand">G</e>
+          <e type="operand">α</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">F</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="342" top="72" width="83" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Haftgrenze </p>
+        </content>
+      </text>
+    </region>
+    <region left="441" top="72" width="176" height="31" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">α</e>
+          <e type="function" args="1">H.max</e>
+          <e type="operand">μ.0</e>
+          <e type="operand">G</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">α</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="351" top="108" width="310" height="208" color="#000000" fontSize="10">
+      <xyplot animFrameRate="20" animPlaybackMode="RepeatIndefinitely" width="300" height="200" points="300" name="XYPlot" keepAspectRatio="false">
+        <chartstyle usedefault="false" backcolor="White" bordercolor="Black" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
+        <xaxes xmin="-0.6" xmax="89.39999" xtick="15" visible="True" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-10" ymax="100" ytick="20" visible="True" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="" titlefont="Arial, 10pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Arial, 8pt" tickfontcolor="Black" xlabel="α in °" ylabel="Kraft in N" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="true" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="Haftkraft" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" fillmode="ToBaseY" filltotrace="-1" filled="false" hatched="false" fillcolor="64, 0, 255, 0" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="Haftgrenze" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Red" linethickness="1" linepattern="Solid" fillmode="Auto" filltotrace="-1" filled="false" hatched="false" fillcolor="64, 0, 0, 255" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="Haften möglich" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Green" linethickness="1" linepattern="Solid" fillmode="ToBaseY" filltotrace="-1" filled="true" hatched="false" fillcolor="64, 0, 127, 0" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Labels" lineantialias="true" linecolor="Fuchsia" linethickness="1" linepattern="Solid" fillmode="Auto" filltotrace="-1" filled="false" hatched="false" fillcolor="64, 255, 0, 255" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">α</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">H</e>
+          <e type="function" args="1">abs</e>
+          <e type="operand">α</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">H.max</e>
+          <e type="operand">α</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">H</e>
+          <e type="function" args="1">abs</e>
+          <e type="operand">α</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">H.max</e>
+          <e type="operator" args="2">&lt;</e>
+          <e type="bracket">(</e>
+          <e type="operand">100</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">0</e>
+          <e type="operand">0</e>
+          <e type="operand" style="string">+</e>
+          <e type="operand">1000</e>
+          <e type="operand">1</e>
+          <e type="operand">4</e>
+          <e type="function" args="6">mat</e>
+          <e type="operand">4</e>
+          <e type="operand">1</e>
+          <e type="function" args="6">sys</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="9" top="144" width="267" height="33" color="#000000" fontSize="10">
+      <math optimize="2" decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">α.min</e>
+          <e type="operand">α</e>
+          <e type="function" args="1">H</e>
+          <e type="function" args="1">abs</e>
+          <e type="operand">α</e>
+          <e type="function" args="1">H.max</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">α</e>
+          <e type="operand">0</e>
+          <e type="function" args="3">roots</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="180" width="288" height="33" color="#000000" fontSize="10">
+      <math optimize="2" decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">α.max</e>
+          <e type="operand">α</e>
+          <e type="function" args="1">H</e>
+          <e type="function" args="1">abs</e>
+          <e type="operand">α</e>
+          <e type="function" args="1">H.max</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">α</e>
+          <e type="operand">60</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="3">roots</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="216" width="99" height="30" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">α.min</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">11.9</e>
+        </result>
+      </math>
+    </region>
+    <region left="126" top="216" width="99" height="30" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">α.max</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">45.3</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="252" width="335" height="57" color="#000000" fontSize="10">
+      <math optimize="2" decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">α.min</e>
+          <e type="operand">α.max</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+          <e type="operand">α</e>
+          <e type="function" args="1">H</e>
+          <e type="function" args="1">abs</e>
+          <e type="operand">α</e>
+          <e type="function" args="1">H.max</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">α</e>
+          <e type="operand">0</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">90</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="4">solve</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="315" width="99" height="30" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">α.min</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">11.9</e>
+        </result>
+      </math>
+    </region>
+    <region left="126" top="315" width="99" height="30" border="true" color="#000000" bgColor="#80ff80" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true">
+        <input>
+          <e type="operand">α.max</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">45.3</e>
+        </result>
+      </math>
+    </region>
+  </regions>
+</worksheet>
