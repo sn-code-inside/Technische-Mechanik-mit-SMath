@@ -1,6 +1,6 @@
 # Technische Mechanik mit SMath Studio
 
-Dieses Repository enthält die SMath-Rechenblätter des Buchs "Technische Mechanik mit SMath Studio" von Martin Kraska (erscheint Januar 2026).
+Dieses Repository enthält die SMath-Rechenblätter des Buchs "Technische Mechanik mit SMath Studio" von Martin Kraska.
 
 ISBN 978-3-658-50591-2 <br>
 ISBN 978-3-658-50592-9 (eBook) <br>
