@@ -4,8 +4,11 @@
   <settings ppi="96">
     <identity>
       <id>f7105de0-a067-4683-b9fc-c295b7f25cfc</id>
-      <revision>63</revision>
+      <revision>70</revision>
     </identity>
+    <metadata lang="rus">
+      <author>Martin Kraska</author>
+    </metadata>
     <metadata lang="ger">
       <author>Martin Kraska</author>
     </metadata>
@@ -13,16 +16,16 @@
       <author>Martin Kraska</author>
     </metadata>
     <calculation>
-      <precision>3</precision>
+      <precision>4</precision>
       <exponentialThreshold>5</exponentialThreshold>
       <trailingZeros>false</trailingZeros>
-      <significantDigitsMode>true</significantDigitsMode>
+      <significantDigitsMode>false</significantDigitsMode>
       <mixedNumbers>false</mixedNumbers>
       <roundingMode>0</roundingMode>
-      <approximateEqualAccuracy>7</approximateEqualAccuracy>
+      <approximateEqualAccuracy>3</approximateEqualAccuracy>
       <fractions>decimal</fractions>
     </calculation>
-    <pageModel active="false" viewMode="1" printGrid="false" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true" hideElementsHighlightings="false">
+    <pageModel active="false" viewMode="2" printGrid="false" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true" hideElementsHighlightings="false">
       <paper id="1" orientation="Portrait" width="850" height="1100" />
       <margins left="39" right="39" top="39" bottom="39" />
       <header alignment="Center" color="#a9a9a9">&amp;[DATE] &amp;[TIME] - &amp;[FILENAME]</header>
@@ -32,50 +35,102 @@
     <dependencies>
       <assembly name="SMath Core" version="1.73.9126.0" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
       <assembly name="MathRegion" version="1.73.9126.0" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="PictureRegion" version="1.73.9126.0" guid="06b5df04-393e-4be7-9107-305196fcb861" />
       <assembly name="TextRegion" version="1.73.9126.0" guid="485d28c5-349a-48b6-93be-12a35a1c1e39" />
       <assembly name="Image Region" version="2.100.9141.40696" guid="63ddaef8-9a56-4ff6-938e-d590b638bf99" />
-      <assembly name="X-Y Plot Region (JXCharts)" version="0.3.9338.42055" guid="c12231ec-4873-43c1-a7d0-a167ebd17066" />
+      <assembly name="X-Y Plot Region (JXCharts)" version="0.4.9441.40064" guid="c12231ec-4873-43c1-a7d0-a167ebd17066" />
     </dependencies>
   </settings>
   <regions type="content">
-    <region left="0" top="9" width="216" height="23" color="#000000" fontSize="10">
+    <region left="0" top="0" width="753" height="38" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="ger" width="753" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Begleitmaterial zu Martin Kraska: "Technische Mechanik mit SMath Studio",<br />https://doi.org/10.1007/978-3-658-50592-9</p>
+        </content>
+      </text>
+      <text lang="eng" width="753" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Supplementary material for Martin Kraska: "Engineering Mechanics with SMath Studio",<br />https://doi.org/10.1007/978-3-658-50592-9</p>
+        </content>
+      </text>
+      <text lang="rus" width="753" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Сопроводительные материалы к Мартин Краска: «Инженерная Механика с SMath Studio»,<br />https://doi.org/10.1007/978-3-658-50592-9</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="45" width="664" height="48" color="#000000" fontSize="10">
+      <text lang="ger" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>\[REGION[118aa9c61ece42988a03d6c90ecab38e]]\</p>
+        </content>
+        <regions>
+          <region id="118aa9c61ece42988a03d6c90ecab38e" left="2" top="0" width="657" height="47" color="#000000">
+            <picture>
+              <raw format="png" encoding="base64">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</raw>
+            </picture>
+          </region>
+        </regions>
+      </text>
+    </region>
+    <region left="0" top="108" width="251" height="23" color="#000000" fontSize="10">
       <text lang="ger" fontFamily="Arial" fontSize="10">
         <content>
           <p style="font-weight: bold;">Freie gedämpfte Schwingungen</p>
         </content>
       </text>
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">Free damped oscillations</p>
+        </content>
+      </text>
+      <text lang="rus" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">Свободные затухающие колебания</p>
+        </content>
+      </text>
     </region>
-    <region left="495" top="36" width="127" height="108" color="#000000" fontSize="10" showInputData="false">
+    <region left="495" top="135" width="127" height="108" color="#000000" fontSize="10" showInputData="false">
       <image>
-        <imagefile filename="mb2wf.png" lenght="1043" width="117" height="100" option="border=false;" dataRenderXmlLength="0" renderExt=".png" OLDwidht="121" OLDheight="96" select_rotation="0°">iVBORw0KGgoAAAANSUhEUgAAAHkAAABgCAYAAAA5I90aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAOoSURBVHhe7ZpNbtwwDEZneoTuu+z9D9Rl971CWxZhodgiRVmSLZLfA4wE4x/RfKQsZ/L+/ZcXCM2Xj58gMJCcAEhOACQnAJITAMkJgOQEQHICIDkBkJwASE5At+T3+/1/Az7okgyxPjFLJsH4wsonJskQ7BtVMj97Idg3omSWC8H+qUqO1r08I2XlJNmD4B5h5bHRRP/69v3jN52u//E6JmlGMfQWVRmD5bwVMe8Ei/7688e/nzXMkllGb5I1RoUR2nm144nRuHeEZEuim5I5UXzYLMlHAZZrRZNsnW57OcpWJVOSjrtXSSZa14smeQW1jhYl1wQTMyRfSb50DmGJc0bcO6M9m6uSKSFSIkaT1SuL6ZWmHU9ciX1XtOcxUX1PvisB1nG0wrASSWpJSzBhXl0zrQ7SkLqpdc3afu0caV9rnKgMSR6hJ/m1/do50r6R2GtxeUH9guLISJJKehImCZslLwNmyZRID9UsFQXhIf4VNKdrThofpiVxhNp1y8+I43itc2rx9cTfc+zOqJ1MN0k3t8MNzorBs6yriJJZ8FOUXWTF2nm0L5PsquTdBEuxlJ9fKYosnCQ/JThTZ93NSfJuyb4SDwrmM+rCC8QAkhPQJXn14uY4zVqm3SvnZMMkmeQ+tSCLDueWtxU0JbPcuwRnKSRJ6grZqmQWfDd3FtXdWCXOlC1KfkrwFbgoohbGKFXJngR74kpnzujmqmRJ8KzpA9xLc+FFkFx09xgjDTLaXKbvk8tDygGjSx9N7kxGcr3l6hrMRVx4QXAcTtN1S245hUUvgpn3Wl7rCiPjnzo5urineDKvptU1eJbRAjFLpulmdMrJzhVZM2YAk2SSS4M9OeWA62z7nrxi1uiNd+W9tu5v5nhiJ1MQtK0UmRktr7NzXpXMciF4LZzj4zabbd+T7xpHY4cYZnDqZM83A+qYX6F2h7qON/CZMJKBTJdkdIlPzJJJMJ7XPjFJhmDfNCVDsH9UyRAcA/Fv15Jg+vxuLIW2Oi7PxV7tZHRwLKqSITgWza8aS45T4spiKMeyjNN7fCZMr1AEpnC/mF6hINg3plcoCPaNKBndGwdRMgTHwbzwAn7pkkxT+K7w2gEz0BmzZDyj/WKSDMG+Mf3Fq5RcTtkrxa94NGQt1GYno4v9o0qG4BgMfZ+MAvBBtZPRwbGoSpYEl10M/GB6hSLQ3X4xSYZg3zQlQ7B/VMkQHIOu//ECPjEvvIBfIDkBkJwASE4AJIfn9foD5F5ynjnpMwgAAAAASUVORK5CYII=</imagefile>
+        <imagefile filename="44vzt.png" lenght="1043" width="117" height="100" option="border=false;" dataRenderXmlLength="0" renderExt=".png" OLDwidht="121" OLDheight="96" select_rotation="0°">iVBORw0KGgoAAAANSUhEUgAAAHkAAABgCAYAAAA5I90aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAOoSURBVHhe7ZpNbtwwDEZneoTuu+z9D9Rl971CWxZhodgiRVmSLZLfA4wE4x/RfKQsZ/L+/ZcXCM2Xj58gMJCcAEhOACQnAJITAMkJgOQEQHICIDkBkJwASE5At+T3+/1/Az7okgyxPjFLJsH4wsonJskQ7BtVMj97Idg3omSWC8H+qUqO1r08I2XlJNmD4B5h5bHRRP/69v3jN52u//E6JmlGMfQWVRmD5bwVMe8Ei/7688e/nzXMkllGb5I1RoUR2nm144nRuHeEZEuim5I5UXzYLMlHAZZrRZNsnW57OcpWJVOSjrtXSSZa14smeQW1jhYl1wQTMyRfSb50DmGJc0bcO6M9m6uSKSFSIkaT1SuL6ZWmHU9ciX1XtOcxUX1PvisB1nG0wrASSWpJSzBhXl0zrQ7SkLqpdc3afu0caV9rnKgMSR6hJ/m1/do50r6R2GtxeUH9guLISJJKehImCZslLwNmyZRID9UsFQXhIf4VNKdrThofpiVxhNp1y8+I43itc2rx9cTfc+zOqJ1MN0k3t8MNzorBs6yriJJZ8FOUXWTF2nm0L5PsquTdBEuxlJ9fKYosnCQ/JThTZ93NSfJuyb4SDwrmM+rCC8QAkhPQJXn14uY4zVqm3SvnZMMkmeQ+tSCLDueWtxU0JbPcuwRnKSRJ6grZqmQWfDd3FtXdWCXOlC1KfkrwFbgoohbGKFXJngR74kpnzujmqmRJ8KzpA9xLc+FFkFx09xgjDTLaXKbvk8tDygGjSx9N7kxGcr3l6hrMRVx4QXAcTtN1S245hUUvgpn3Wl7rCiPjnzo5urineDKvptU1eJbRAjFLpulmdMrJzhVZM2YAk2SSS4M9OeWA62z7nrxi1uiNd+W9tu5v5nhiJ1MQtK0UmRktr7NzXpXMciF4LZzj4zabbd+T7xpHY4cYZnDqZM83A+qYX6F2h7qON/CZMJKBTJdkdIlPzJJJMJ7XPjFJhmDfNCVDsH9UyRAcA/Fv15Jg+vxuLIW2Oi7PxV7tZHRwLKqSITgWza8aS45T4spiKMeyjNN7fCZMr1AEpnC/mF6hINg3plcoCPaNKBndGwdRMgTHwbzwAn7pkkxT+K7w2gEz0BmzZDyj/WKSDMG+Mf3Fq5RcTtkrxa94NGQt1GYno4v9o0qG4BgMfZ+MAvBBtZPRwbGoSpYEl10M/GB6hSLQ3X4xSYZg3zQlQ7B/VMkQHIOu//ECPjEvvIBfIDkBkJwASE4AJIfn9foD5F5ynjnpMwgAAAAASUVORK5CYII=</imagefile>
         <input>
           <e type="operand">#</e>
         </input>
       </image>
     </region>
-    <region left="540" top="36" width="20" height="24" color="#000000" fontSize="10">
-      <math decimalPlaces="4" significantDigitsMode="false">
+    <region left="540" top="135" width="20" height="24" color="#000000" fontSize="10">
+      <math>
         <input>
           <e type="operand">c</e>
         </input>
       </math>
     </region>
-    <region left="594" top="36" width="20" height="24" color="#ff0000" fontSize="10">
-      <math decimalPlaces="4" significantDigitsMode="false">
+    <region left="594" top="135" width="20" height="24" color="#ff0000" fontSize="10">
+      <math>
         <input>
           <e type="operand">x</e>
         </input>
       </math>
     </region>
-    <region left="0" top="45" width="57" height="23" color="#000000" fontSize="10">
+    <region left="0" top="144" width="53" height="23" color="#000000" fontSize="10">
       <text lang="ger" fontFamily="Arial" fontSize="10">
         <content>
           <p>Masse </p>
         </content>
       </text>
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Mass</p>
+        </content>
+      </text>
+      <text lang="rus" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Масса</p>
+        </content>
+      </text>
     </region>
-    <region left="135" top="45" width="66" height="24" color="#000000" bgColor="#ffff80" fontSize="10">
-      <math decimalPlaces="4" significantDigitsMode="false">
+    <region left="135" top="144" width="66" height="24" color="#000000" bgColor="#ffff80" fontSize="10">
+      <math>
         <input>
           <e type="operand">m</e>
           <e type="operand">1</e>
@@ -85,15 +140,25 @@
         </input>
       </math>
     </region>
-    <region left="261" top="45" width="144" height="23" color="#000000" fontSize="10">
+    <region left="261" top="144" width="138" height="23" color="#000000" fontSize="10">
       <text lang="ger" fontFamily="Arial" fontSize="10">
         <content>
           <p>Anfangsbedingungen </p>
         </content>
       </text>
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Initial conditions</p>
+        </content>
+      </text>
+      <text lang="rus" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Начальные условия</p>
+        </content>
+      </text>
     </region>
-    <region left="135" top="72" width="70" height="41" color="#000000" bgColor="#ffff80" fontSize="10">
-      <math decimalPlaces="4" significantDigitsMode="false">
+    <region left="135" top="171" width="70" height="41" color="#000000" bgColor="#ffff80" fontSize="10">
+      <math>
         <input>
           <e type="operand">c</e>
           <e type="operand">1</e>
@@ -105,8 +170,8 @@
         </input>
       </math>
     </region>
-    <region left="315" top="72" width="73" height="30" color="#000000" bgColor="#ffff80" fontSize="10">
-      <math decimalPlaces="4" significantDigitsMode="false">
+    <region left="315" top="171" width="73" height="30" color="#000000" bgColor="#ffff80" fontSize="10">
+      <math>
         <input>
           <e type="operand">x.0</e>
           <e type="operand">0</e>
@@ -116,15 +181,25 @@
         </input>
       </math>
     </region>
-    <region left="0" top="81" width="108" height="23" color="#000000" fontSize="10">
+    <region left="0" top="180" width="138" height="23" color="#000000" fontSize="10">
       <text lang="ger" fontFamily="Arial" fontSize="10">
         <content>
           <p>Federsteifigkeit </p>
         </content>
       </text>
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Spring stiffness</p>
+        </content>
+      </text>
+      <text lang="rus" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Жесткость пружины</p>
+        </content>
+      </text>
     </region>
-    <region left="315" top="99" width="85" height="41" color="#000000" bgColor="#ffff80" fontSize="10">
-      <math decimalPlaces="4" significantDigitsMode="false">
+    <region left="315" top="198" width="85" height="41" color="#000000" bgColor="#ffff80" fontSize="10">
+      <math>
         <input>
           <e type="operand">v.0</e>
           <e type="operand">30</e>
@@ -136,15 +211,15 @@
         </input>
       </math>
     </region>
-    <region left="594" top="99" width="20" height="24" color="#000000" fontSize="10">
-      <math decimalPlaces="4" significantDigitsMode="false">
+    <region left="594" top="198" width="20" height="24" color="#000000" fontSize="10">
+      <math>
         <input>
           <e type="operand">m</e>
         </input>
       </math>
     </region>
-    <region left="135" top="108" width="114" height="52" color="#000000" bgColor="#ffff80" fontSize="10">
-      <math decimalPlaces="4" significantDigitsMode="false">
+    <region left="135" top="207" width="114" height="52" color="#000000" bgColor="#ffff80" fontSize="10">
+      <math>
         <input>
           <e type="operand">d</e>
           <e type="operand">1</e>
@@ -162,22 +237,32 @@
         </input>
       </math>
     </region>
-    <region left="558" top="108" width="20" height="24" color="#000000" fontSize="10">
-      <math decimalPlaces="4" significantDigitsMode="false">
+    <region left="558" top="207" width="20" height="24" color="#000000" fontSize="10">
+      <math>
         <input>
           <e type="operand">d</e>
         </input>
       </math>
     </region>
-    <region left="0" top="126" width="127" height="23" color="#000000" fontSize="10">
-      <text lang="ger" fontFamily="Arial" fontSize="10">
+    <region left="0" top="216" width="139" height="38" color="#000000" fontSize="10">
+      <text lang="ger" width="139" fontFamily="Arial" fontSize="10">
         <content>
           <p>Dämpferkonstante </p>
         </content>
       </text>
+      <text lang="eng" width="139" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Damping coefficient</p>
+        </content>
+      </text>
+      <text lang="rus" width="139" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Коэффициент сопротивления</p>
+        </content>
+      </text>
     </region>
-    <region left="315" top="162" width="130" height="43" color="#000000" fontSize="10">
-      <math decimalPlaces="4" significantDigitsMode="false">
+    <region left="315" top="252" width="130" height="43" color="#000000" fontSize="10">
+      <math>
         <input>
           <e type="operand">ω</e>
           <e type="operand">c</e>
@@ -196,15 +281,25 @@
         </result>
       </math>
     </region>
-    <region left="0" top="171" width="358" height="23" color="#000000" fontSize="10">
+    <region left="0" top="261" width="358" height="38" color="#000000" fontSize="10">
       <text lang="ger" width="358" fontFamily="Arial" fontSize="10">
         <content>
           <p>Eigenkreisfrequenz der ungedämpften Schwingung</p>
         </content>
       </text>
+      <text lang="eng" width="358" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Undamped natural angular frequency</p>
+        </content>
+      </text>
+      <text lang="rus" width="358" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Угловая частота свободных колебаний (без демпфирования)</p>
+        </content>
+      </text>
     </region>
-    <region left="315" top="198" width="125" height="41" color="#000000" fontSize="10">
-      <math decimalPlaces="4" significantDigitsMode="false">
+    <region left="315" top="288" width="125" height="41" color="#000000" fontSize="10">
+      <math>
         <input>
           <e type="operand">δ</e>
           <e type="operand">d</e>
@@ -224,15 +319,25 @@
         </result>
       </math>
     </region>
-    <region left="0" top="207" width="121" height="23" color="#000000" fontSize="10">
+    <region left="0" top="297" width="167" height="23" color="#000000" fontSize="10">
       <text lang="ger" fontFamily="Arial" fontSize="10">
         <content>
           <p>Abklingkoeffizient </p>
         </content>
       </text>
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Decay coefficient</p>
+        </content>
+      </text>
+      <text lang="rus" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Коэффициент затухания</p>
+        </content>
+      </text>
     </region>
-    <region left="315" top="234" width="88" height="41" border="true" color="#000000" fontSize="10">
-      <math decimalPlaces="4" significantDigitsMode="false">
+    <region left="315" top="333" width="88" height="41" border="true" color="#000000" fontSize="10">
+      <math>
         <input>
           <e type="operand">D</e>
           <e type="operand">δ</e>
@@ -248,15 +353,25 @@
         </result>
       </math>
     </region>
-    <region left="0" top="243" width="113" height="23" color="#000000" fontSize="10">
+    <region left="0" top="342" width="206" height="23" color="#000000" fontSize="10">
       <text lang="ger" fontFamily="Arial" fontSize="10">
         <content>
           <p>Dämpfungsgrad </p>
         </content>
       </text>
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Damping ratio</p>
+        </content>
+      </text>
+      <text lang="rus" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Коэффициент демпфирования</p>
+        </content>
+      </text>
     </region>
-    <region left="315" top="270" width="208" height="44" border="true" color="#000000" fontSize="10">
-      <math decimalPlaces="4" trailingZeros="true">
+    <region left="315" top="369" width="208" height="44" border="true" color="#000000" fontSize="10">
+      <math significantDigitsMode="true" trailingZeros="true">
         <input>
           <e type="operand">ω.d</e>
           <e type="operand">ω</e>
@@ -279,22 +394,37 @@
         </result>
       </math>
     </region>
-    <region left="0" top="279" width="341" height="23" color="#000000" fontSize="10">
+    <region left="0" top="378" width="341" height="23" color="#000000" fontSize="10">
       <text lang="ger" width="341" fontFamily="Arial" fontSize="10">
         <content>
           <p>Eigenkreisfrequenz der gedämpften Schwingung </p>
         </content>
       </text>
+      <text lang="eng" width="341" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Natural angular frequency of the damped oscillation</p>
+        </content>
+      </text>
+      <text lang="rus" width="341" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Угловая частота затухающих колебаний</p>
+        </content>
+      </text>
     </region>
-    <region left="0" top="315" width="80" height="23" color="#000000" fontSize="10">
+    <region left="0" top="414" width="114" height="23" color="#000000" fontSize="10">
       <text lang="ger" fontFamily="Arial" fontSize="10">
         <content>
           <p>Zeitverlauf </p>
         </content>
       </text>
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Закон движения</p>
+        </content>
+      </text>
     </region>
-    <region left="0" top="333" width="355" height="55" color="#000000" fontSize="10">
-      <math decimalPlaces="4" significantDigitsMode="false">
+    <region left="0" top="432" width="355" height="55" color="#000000" fontSize="10">
+      <math>
         <input>
           <e type="operand">t</e>
           <e type="function" args="1">x</e>
@@ -325,8 +455,8 @@
         </input>
       </math>
     </region>
-    <region left="360" top="333" width="310" height="208" color="#000000" fontSize="10">
-      <xyplot width="300" height="200" points="100" name="XYPlot">
+    <region left="360" top="432" width="310" height="208" color="#000000" fontSize="10">
+      <xyplot animFrameRate="20" animPlaybackMode="RepeatIndefinitely" width="300" height="200" points="100" name="XYPlot" keepAspectRatio="false">
         <chartstyle usedefault="false" backcolor="White" bordercolor="Black" />
         <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
         <xaxes xmin="0" xmax="6" xtick="1" visible="True" decimalplaces="3" numberformat="General" />
@@ -336,7 +466,7 @@
         <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Arial, 8pt" tickfontcolor="Black" xlabel="Zeit in s" ylabel="Auslenkung in cm" y2label="y2" />
         <legend isbordervisible="true" islegendvisible="false" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
         <traces>
-          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" filled="false" hatched="false" fillcolor="64, 0, 0, 255" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" fillmode="Auto" filltotrace="-1" filled="false" hatched="false" fillcolor="64, 0, 0, 255" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
         </traces>
         <input>
           <e type="operand">t</e>
