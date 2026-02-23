@@ -4,12 +4,12 @@
   <settings ppi="96">
     <identity>
       <id>42bf070e-a19c-48e1-9431-65407bf42ad1</id>
-      <revision>10</revision>
+      <revision>13</revision>
     </identity>
-    <metadata lang="rus">
+    <metadata lang="ger">
       <author>Martin Kraska</author>
     </metadata>
-    <metadata lang="ger">
+    <metadata lang="eng">
       <author>Martin Kraska</author>
     </metadata>
     <calculation>
@@ -98,7 +98,7 @@
         </input>
       </math>
     </region>
-    <region left="9" top="612" width="130" height="23" color="#000000" fontSize="10" isBreakable="false">
+    <region left="9" top="612" width="121" height="23" color="#000000" fontSize="10" isBreakable="false">
       <text lang="ger" fontFamily="Arial" fontSize="10">
         <content>
           <p>Systemeigenschaften </p>
@@ -148,7 +148,7 @@
         </input>
       </math>
     </region>
-    <region left="9" top="648" width="97" height="23" color="#000000" fontSize="10" isBreakable="false">
+    <region left="9" top="648" width="72" height="23" color="#000000" fontSize="10" isBreakable="false">
       <text lang="ger" fontFamily="Arial" fontSize="10">
         <content>
           <p>Erregung </p>
@@ -187,7 +187,7 @@
         </input>
       </math>
     </region>
-    <region left="9" top="684" width="138" height="23" color="#000000" fontSize="10" isBreakable="false">
+    <region left="9" top="684" width="109" height="23" color="#000000" fontSize="10" isBreakable="false">
       <text lang="ger" fontFamily="Arial" fontSize="10">
         <content>
           <p>Anfangsbedingungen </p>
@@ -222,7 +222,7 @@
         </input>
       </math>
     </region>
-    <region left="9" top="720" width="162" height="23" color="#000000" fontSize="10" isBreakable="false">
+    <region left="9" top="720" width="147" height="23" color="#000000" fontSize="10" isBreakable="false">
       <text lang="ger" fontFamily="Arial" fontSize="10">
         <content>
           <p>Generalisierte Größen</p>
@@ -337,24 +337,7 @@
         </result>
       </math>
     </region>
-    <region left="9" top="954" width="170" height="38" color="#000000" fontSize="10" isBreakable="false">
-      <text lang="ger" width="170" fontFamily="Arial" fontSize="10">
-        <content>
-          <p>Erregerkreisfrequenz </p>
-        </content>
-      </text>
-      <text lang="eng" width="170" fontFamily="Arial" fontSize="10">
-        <content>
-          <p>Excitation angular frequency</p>
-        </content>
-      </text>
-      <text lang="rus" width="170" fontFamily="Arial" fontSize="10">
-        <content>
-          <p>Угловая частота возбуждения</p>
-        </content>
-      </text>
-    </region>
-    <region left="162" top="954" width="168" height="41" color="#000000" fontSize="10">
+    <region left="162" top="945" width="168" height="41" color="#000000" fontSize="10">
       <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
         <input>
           <e type="operand">Ω</e>
@@ -375,24 +358,24 @@
         </result>
       </math>
     </region>
-    <region left="9" top="990" width="156" height="53" color="#000000" fontSize="10" isBreakable="false">
-      <text lang="ger" width="156" fontFamily="Arial" fontSize="10">
+    <region left="9" top="954" width="170" height="38" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="ger" width="170" fontFamily="Arial" fontSize="10">
         <content>
-          <p>Eigenkreisfrequenz ungedämpft</p>
+          <p>Erregerkreisfrequenz </p>
         </content>
       </text>
-      <text lang="eng" width="156" fontFamily="Arial" fontSize="10">
+      <text lang="eng" width="170" fontFamily="Arial" fontSize="10">
         <content>
-          <p>Undamped natural angular frequency</p>
+          <p>Excitation angular frequency</p>
         </content>
       </text>
-      <text lang="rus" width="156" fontFamily="Arial" fontSize="10">
+      <text lang="rus" width="170" fontFamily="Arial" fontSize="10">
         <content>
-          <p>Угловая частота свободных колебаний (без демпфирования)</p>
+          <p>Угловая частота возбуждения</p>
         </content>
       </text>
     </region>
-    <region left="162" top="990" width="159" height="55" color="#000000" fontSize="10">
+    <region left="162" top="981" width="159" height="55" color="#000000" fontSize="10">
       <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
         <input>
           <e type="operand">ω.0</e>
@@ -412,7 +395,7 @@
         </result>
       </math>
     </region>
-    <region left="369" top="990" width="142" height="47" color="#000000" fontSize="10">
+    <region left="369" top="981" width="142" height="47" color="#000000" fontSize="10">
       <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
         <input>
           <e type="operand">f.0</e>
@@ -430,24 +413,24 @@
         </result>
       </math>
     </region>
-    <region left="9" top="1035" width="156" height="38" color="#000000" fontSize="10" isBreakable="false">
+    <region left="9" top="990" width="156" height="38" color="#000000" fontSize="10" isBreakable="false">
       <text lang="ger" width="156" fontFamily="Arial" fontSize="10">
         <content>
-          <p>Dämpfungsgrad, Lehrsches Dämpfungsmaß</p>
+          <p>Eigenkreisfrequenz ungedämpft</p>
         </content>
       </text>
       <text lang="eng" width="156" fontFamily="Arial" fontSize="10">
         <content>
-          <p>Damping ratio, Rayleigh damping coefficient</p>
+          <p>Undamped natural angular frequency</p>
         </content>
       </text>
       <text lang="rus" width="156" fontFamily="Arial" fontSize="10">
         <content>
-          <p>Коэффициент демпфирования </p>
+          <p>Угловая частота свободных колебаний (без демпфирования)</p>
         </content>
       </text>
     </region>
-    <region left="162" top="1035" width="178" height="55" color="#000000" fontSize="10">
+    <region left="171" top="1035" width="178" height="55" color="#000000" fontSize="10">
       <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
         <input>
           <e type="operand">D</e>
@@ -466,7 +449,24 @@
         </result>
       </math>
     </region>
-    <region left="9" top="1098" width="171" height="53" color="#000000" fontSize="10" isBreakable="false">
+    <region left="9" top="1044" width="148" height="38" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="ger" width="148" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Dämpfungsgrad, Lehrsches Dämfungsmaß</p>
+        </content>
+      </text>
+      <text lang="eng" width="148" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Damping ratio, Lehr's damping measure</p>
+        </content>
+      </text>
+      <text lang="rus" width="148" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Коэффициент затухания, мера затухания Лерра</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="1098" width="171" height="38" color="#000000" fontSize="10" isBreakable="false">
       <text lang="ger" width="171" fontFamily="Arial" fontSize="10">
         <content>
           <p>Eigenkreisfrequenz des gedämpften Systems</p>
@@ -483,7 +483,7 @@
         </content>
       </text>
     </region>
-    <region left="162" top="1098" width="200" height="44" color="#000000" fontSize="10">
+    <region left="171" top="1098" width="200" height="44" color="#000000" fontSize="10">
       <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
         <input>
           <e type="operand">ω</e>
@@ -507,7 +507,7 @@
         </result>
       </math>
     </region>
-    <region left="369" top="1098" width="135" height="41" color="#000000" fontSize="10">
+    <region left="378" top="1098" width="135" height="41" color="#000000" fontSize="10">
       <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
         <input>
           <e type="operand">f</e>
@@ -539,7 +539,7 @@
         </result>
       </math>
     </region>
-    <region left="9" top="1152" width="168" height="23" color="#000000" fontSize="10" isBreakable="false">
+    <region left="9" top="1152" width="84" height="23" color="#000000" fontSize="10" isBreakable="false">
       <text lang="ger" fontFamily="Arial" fontSize="10">
         <content>
           <p>Abstimmungsverhältnis </p>
@@ -573,7 +573,7 @@
         </result>
       </math>
     </region>
-    <region left="9" top="1197" width="167" height="38" color="#000000" fontSize="10" isBreakable="false">
+    <region left="9" top="1197" width="167" height="23" color="#000000" fontSize="10" isBreakable="false">
       <text lang="ger" width="167" fontFamily="Arial" fontSize="10">
         <content>
           <p>Statische Auslenkung</p>
@@ -638,7 +638,7 @@
         </content>
       </text>
     </region>
-    <region left="9" top="1296" width="152" height="53" color="#000000" fontSize="10" isBreakable="false">
+    <region left="9" top="1296" width="152" height="23" color="#000000" fontSize="10" isBreakable="false">
       <text lang="ger" width="152" fontFamily="Arial" fontSize="10">
         <content>
           <p>Amplitude eingeschwungen</p>
@@ -651,7 +651,7 @@
       </text>
       <text lang="rus" width="152" fontFamily="Arial" fontSize="10">
         <content>
-          <p>Амплитуда стационарных колебаний</p>
+          <p>Амплитуда установившихся колебаний</p>
         </content>
       </text>
     </region>
@@ -697,7 +697,7 @@
         </result>
       </math>
     </region>
-    <region left="9" top="1350" width="107" height="23" color="#000000" fontSize="10" isBreakable="false">
+    <region left="9" top="1350" width="80" height="23" color="#000000" fontSize="10" isBreakable="false">
       <text lang="ger" fontFamily="Arial" fontSize="10">
         <content>
           <p>Phasenverschiebung </p>
@@ -714,8 +714,8 @@
         </content>
       </text>
     </region>
-    <region left="162" top="1395" width="365" height="65" color="#000000" fontSize="10">
-      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true" breaking="33">
+    <region left="171" top="1395" width="485" height="45" color="#000000" fontSize="10">
+      <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
         <input>
           <e type="operand">t</e>
           <e type="function" args="1">x</e>
@@ -755,7 +755,7 @@
         </input>
       </math>
     </region>
-    <region left="9" top="1413" width="120" height="23" color="#000000" fontSize="10" isBreakable="false">
+    <region left="9" top="1413" width="93" height="23" color="#000000" fontSize="10" isBreakable="false">
       <text lang="ger" fontFamily="Arial" fontSize="10">
         <content>
           <p>Gesamtlösung </p>
@@ -772,7 +772,7 @@
         </content>
       </text>
     </region>
-    <region left="9" top="1467" width="155" height="38" color="#000000" fontSize="10" isBreakable="false">
+    <region left="9" top="1458" width="155" height="38" color="#000000" fontSize="10" isBreakable="false">
       <text lang="ger" width="155" fontFamily="Arial" fontSize="10">
         <content>
           <p>Konstanten aus den Anfangsbedingungen </p>
@@ -789,7 +789,7 @@
         </content>
       </text>
     </region>
-    <region left="162" top="1467" width="234" height="31" color="#000000" fontSize="10">
+    <region left="171" top="1458" width="234" height="31" color="#000000" fontSize="10">
       <math decimalPlaces="3" significantDigitsMode="true" trailingZeros="true">
         <input>
           <e type="operand">A</e>
@@ -810,7 +810,7 @@
         </result>
       </math>
     </region>
-    <region left="162" top="1494" width="354" height="41" color="#000000" fontSize="10">
+    <region left="171" top="1485" width="354" height="41" color="#000000" fontSize="10">
       <math decimalPlaces="3" significantDigitsMode="true">
         <input>
           <e type="operand">B</e>
@@ -844,7 +844,7 @@
         </result>
       </math>
     </region>
-    <region left="54" top="1539" width="269" height="136" color="#000000" fontSize="10">
+    <region left="54" top="1530" width="269" height="136" color="#000000" fontSize="10">
       <math decimalPlaces="3" significantDigitsMode="true">
         <input>
           <e type="operand">xaxis</e>
@@ -874,7 +874,7 @@
         </input>
       </math>
     </region>
-    <region left="324" top="1539" width="269" height="136" color="#000000" fontSize="10">
+    <region left="324" top="1530" width="269" height="136" color="#000000" fontSize="10">
       <math decimalPlaces="3" significantDigitsMode="true">
         <input>
           <e type="operand">yaxis</e>
@@ -905,7 +905,7 @@
         </input>
       </math>
     </region>
-    <region left="9" top="1692" width="623" height="216" color="#000000" fontSize="10">
+    <region left="9" top="1683" width="623" height="216" color="#000000" fontSize="10">
       <xyplot animFrameRate="20" animPlaybackMode="RepeatIndefinitely" width="613" height="208" points="1500" name="XYPlot" keepAspectRatio="false">
         <chartstyle usedefault="false" backcolor="White" bordercolor="Black" />
         <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
@@ -939,7 +939,7 @@
         </input>
       </xyplot>
     </region>
-    <region left="162" top="1890" width="146" height="23" color="#000000" fontSize="10">
+    <region left="162" top="1881" width="146" height="23" color="#000000" fontSize="10">
       <text lang="ger" fontFamily="Arial" fontSize="10">
         <content>
           <p>Format&gt; Points: 1500</p>
@@ -952,7 +952,7 @@
       </text>
       <text lang="rus" fontFamily="Arial" fontSize="10">
         <content>
-          <p>Format &gt; Points: 1500</p>
+          <p>Формат &gt; Точки: 1500</p>
         </content>
       </text>
     </region>
