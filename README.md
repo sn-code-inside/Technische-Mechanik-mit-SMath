@@ -1,7 +1,9 @@
 # Technische Mechanik mit SMath Studio
 
 Dieses Repository enthält die SMath-Rechenblätter des Buchs "Technische Mechanik mit SMath Studio" von Martin Kraska.
+
 The supplementary material (SMath worksheets) is trilingual (German, English, Russian).
+
 Дополнительный материал (SMath расчеты) имеется на трех языках (немецкий, английский, русский).
 
 ISBN 978-3-658-50591-2 <br>
